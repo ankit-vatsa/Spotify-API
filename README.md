@@ -59,9 +59,9 @@ Access token : BQDBKJ5eo5jxbtpWjVOj7ryS84khybFpP_lTqzV7uV-T_m0cTfwheeheeheeheehe
 
 
 
-<p>Example Response</p>
+<p>Check access token </p>
 
 ```
-
+curl "https://api.spotify.com/v1/artists/4Z8W4fKeB5YxbusRsdQVPb" -H "Authorization: Bearer  your_access_token_paste_here"
 ```
 
