@@ -1,8 +1,12 @@
 # Spotify-API
 Spotify API Based Project
 
->> Get Access Token
->> Curl
+>>Get Access Token
+-Curl
+```
 curl -X POST "https://accounts.spotify.com/api/token" -H "Content-Type: application/x-www-form-urlencoded" -d "grant_type=client_credentials&client_id=your-client-id&client_secret=your-client-secret"
+```
+-Chrome Console
+```
 
->> Chrome Console
+```
