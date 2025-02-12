@@ -1,5 +1,4 @@
-# Spotify-API
-Spotify API Based Project
+# Spotify-API in SIMPLIFIED MANNER
 
 <h2>Get Access Token</h2>
 
