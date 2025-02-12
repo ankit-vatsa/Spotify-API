@@ -6,6 +6,18 @@
 ```
 curl -X POST "https://accounts.spotify.com/api/token" -H "Content-Type: application/x-www-form-urlencoded" -d "grant_type=client_credentials&client_id=your-client-id&client_secret=your-client-secret"
 ```
+
+<p>Example Response</p>
+
+```
+{
+  "access_token": "BQDBKJ5eo5jxbtpWjVOj7ryS84khybFpP_lTqzV7uV-T_m0cTfwheeheeheeheehee",
+  "token_type": "Bearer",
+  "expires_in": 3600
+}
+
+```
+
 - Chrome Console
 ```
 const client_id = 'your_client_id'; 
@@ -38,3 +50,18 @@ fetch('https://accounts.spotify.com/api/token', {
   });
 
 ```
+
+<p>Example Response</p>
+
+```
+Access token : BQDBKJ5eo5jxbtpWjVOj7ryS84khybFpP_lTqzV7uV-T_m0cTfwheeheeheeheehee
+```
+
+
+
+<p>Example Response</p>
+
+```
+
+```
+
