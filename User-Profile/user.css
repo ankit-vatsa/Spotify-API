@@ -8,7 +8,7 @@ body{
     background-size: cover; /* This ensures the image covers the entire container */
     background-position: center center; /* Keeps the focus of the image in the center */
     background-attachment: fixed; /* This makes the background image stay fixed when scrolling (optional) */
-    height: 100vh; /* Makes sure the background image covers the entire height of the viewport */
+    height: 90vh; /* Makes sure the background image covers the entire height of the viewport */
 }
 .container{
     display: flex;
@@ -37,6 +37,7 @@ body{
     height: auto;
     justify-content: center;
     align-content: center;
+    vertical-align: center;
     padding-left: 18px;
     padding-right: 18px;
 }
