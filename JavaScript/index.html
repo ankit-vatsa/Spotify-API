@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function clickAlert(inputVar){
+            alert("Welcome to the site, " + inputVar);
+        }
+        function displayHide(elementId){
+            document.getElementById(elementId).style.display="none";
+        }
+        function displayShow(elementId){
+            document.getElementById(elementId).style.display="block";
+        }
+        function clickResponse(inputVar){
+            var openEle = document.getElementById("greeting");
+            openEle.innerText = "The name entered is " + inputVar;
+            displayShow("greeting");
+            
+            clickAlert(inputVar);
+            displayShow("lab2");
+        }
+        function clickResponse2(inputVar){
+            var openEle = document.getElementById("welcome");
+            displayShow("welcome");
+            openEle.innerText = "Welcome " + inputVar;
+            displayShow("lab3");
+        }
+    </script>
+</head>
+<body>
+    <div class="lab1" id="lab1">
+        <h1>Lab 1</h1>
+        <label for="name">Enter your name: </label>
+        <input type="text" placeholder="Enter your name:" id="nameVal">
+        <button onclick="clickResponse(nameVal.value)" value="Submit">Submit</button>
+        <h2 id="greeting"></h2>
+    </div>
+    <br>
+    <div class="lab2" id="lab2" style="display: none;">
+        <h1>Lab 2</h1>
+        <label for="name">Enter your name: </label>
+        <input type="text" placeholder="Enter your name:" id="nameValue">
+        <button onclick="clickResponse2(nameValue.value)" value="Submit">Submit</button>
+        <h2 id="welcome"></h2>
+    </div> 
+    
+</body>
+</html>
