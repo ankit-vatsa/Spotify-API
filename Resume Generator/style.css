@@ -1,0 +1,46 @@
+.cover{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+}
+.resume{
+    display: grid;
+    border: 2px solid black;
+    margin-top: 10px;
+    /* width: 75%; */
+    /* min-height: 150vh; */
+    height: auto;
+}
+.demographic{
+    padding-top: 10px;
+    background-color: grey;
+    width: 20em;
+    margin-top: 20px;
+    margin-left: 20px;
+    max-height: 50vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.info{
+    text-align: center;
+}
+img{
+    border-radius: 50%;
+    width:100%;
+    max-width: 180px;
+    height: auto;
+}
+.details{
+    margin-left: 20px;
+}
+.uploaddocument{
+    background-color: aquamarine;
+    padding: 20px;
+    border-radius: 20px;
+    color: brown;
+    font-size: inherit;
+}

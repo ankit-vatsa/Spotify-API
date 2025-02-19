@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function readFname(item){
+            let f = item.files[0];
+            let fname = f.name;
+ 
+            let lastIndex = fname.lastIndexOf('.');
+ 
+            if(lastIndex == -1){
+                alert("Cannot find the extension");
+                return;
+            }
+ 
+            let ext = fname.substr(lastIndex + 1);
+            if(ext.toLowerCase() in { 'txt':'' } ){
+                let fSize = f.size;
+                alert(`File with extension ${ext} found with size ${fSize} `)
+            }
+            else if(ext.toLowerCase() in { 'html':'' } ){
+                let fSize = f.size;
+                alert(`File with extension ${ext} found with size ${fSize} btyes`)
+            } else{
+                alert("File Not Found");
+            }
+ 
+ 
+        }
+ 
+    </script>
+</head>
+<body>
+    <input type="file" id="fileInput" onchange="readFname(this)">
+ 
+ 
+</body>
+</html>
+ 

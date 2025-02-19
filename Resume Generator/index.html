@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function readFname(item) {
+            let f = item.files[0];
+            let fname = f.name;
+
+            let lastIndex = fname.lastIndexOf('.');
+
+            if (lastIndex == -1) {
+                alert("Cannot find the extension");
+                return;
+            }
+            
+            let ext = fname.substr(lastIndex + 1);
+            if (ext.toLowerCase() in { 'json': '' }) {
+                // let fSize = f.size;
+                // alert(`File with extension ${ext} found with size ${fSize} `)
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const jsonData = JSON.parse(e.target.result);  // Parse the JSON data
+
+                    // Populate the HTML elements with JSON data
+                    document.getElementById('name').textContent = jsonData.name || "No Name";
+                    document.getElementById('designation').textContent = jsonData.designation || "No Designation";
+                    document.getElementById('email').textContent = jsonData.email || "No Email";
+                    document.getElementById('mobile').textContent = jsonData.mobile || "No Mobile";
+                    document.getElementById('location').textContent = jsonData.location || "No Location";
+                    document.getElementById('summary').textContent = jsonData.summary || "No Summary";
+                    document.getElementById('education').textContent = jsonData.education || "No Education Details";
+                    document.getElementById('skills').textContent = jsonData.skills || "No Skills Listed";
+                };
+                reader.readAsText(f);
+            }
+            else if (ext.toLowerCase() in { 'jpg': '' }) {
+
+                // let fSize = f.size;
+                // alert(`File with extension ${ext} found with size ${fSize} btyes`)
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const imgElement = document.querySelector('.dispPicture img');
+                    imgElement.src = e.target.result;  // Set the profile picture source to the uploaded image
+                };
+                reader.readAsDataURL(f);  // Convert the file to a base64 URL for the image
+            } else {
+                alert("Please upload valid file.");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="cover">
+        <div class="uploaddocument">
+            <label for="document">Please upload your documents here:</label>
+            <hr>
+            <label for="JSON File">JSON File</label>
+            <input type="file" name="jsonfile" id="jsonfile" onchange="readFname(this)">
+            <label for="Profile picture">Profile Picture</label>
+            <input type="file" name="profilepicture" id="profilepicture" onchange="readFname(this)">
+        </div>
+        <div class="resume">
+            <div class="demographic">
+                <div class="dispPicture">
+                    <!-- <img src="" alt="display picture"> -->
+                    <img src="https://www.drishtiias.com/images/uploads/1589193900_image2.jpg"
+                        alt="display picture"></img>
+                </div>
+                <div class="info">
+                    <h2 id="name">Name</h2>
+                    <p id="designation">Designation</p>
+                    <p id="email">Email</p>
+                    <p id="mobile">Mobile</p>
+                    <p id="location">Location</p>
+                </div>
+            </div>
+            <div class="details">
+                <h2>Summary</h2>
+                <p id="summary">
+                    <!-- To be filled with JSON data. -->
+                </p>
+                <h2>Education</h2>
+                <p id="education">
+                    <!-- To be filled with JSON data. -->
+                </p>
+                <h2>Skills</h2>
+                <p id="skills">
+                    <!-- To be filled with JSON data. -->
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
