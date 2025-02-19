@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator-Mini</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script type="text/javascript" src="script.js"> -->
+    <script>    
+        function calculateAdd(var1, var2){
+            // var x = document.getElementById("input1");
+            // var y = document.getElementById("input2");
+            var outputElement = document.getElementById("output");
+            z = parseInt(var1)+parseInt(var2);
+            outputElement.innerText = "Output: "+z;
+            // outputElement.placeholder = "Output: "+z;
+        }
+        function calculateSub(var1, var2){
+            var outputElement = document.getElementById("output");
+            z = parseInt(var1)-parseInt(var2);
+            outputElement.innerText = "Output: "+z;
+        }
+        function calculateMul(var1, var2){
+            var outputElement = document.getElementById("output");
+            z = parseInt(var1)*parseInt(var2);
+            outputElement.innerText = "Output: "+z;
+        }
+        function calculateDiv(var1, var2){
+            var outputElement = document.getElementById("output");
+            z = parseInt(var1)/parseInt(var2);
+            outputElement.innerText = "Output: "+z;
+        }
+        function calculateMod(var1, var2){
+            var outputElement = document.getElementById("output");
+            z = parseInt(var1)%parseInt(var2);
+            outputElement.innerText = "Output: "+z;
+        }
+        function alertAnkit(){
+            alert("Choose operator.");
+        }
+    </script>
+
+</head>
+<body>
+<div class="calculator">
+    <div class="input">
+        <label for="Input 1">Input 1: </label>
+        <input type="number" name="input1" id="input1">
+        <hr>
+        <label for="Input 2">Input 2: </label>
+        <input type="number" name="input2" id="input2">
+        <!-- <button onclick="calculateAdd(input1.value, input2.value)">Add</button> -->
+    </div>
+    <br>
+    <!-- <div class="output">
+        <table border="2">
+            <thead>
+                <th colspan="2"><p id="output">Output:</p></th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>+</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>*</td>
+                    <td>/</td>
+                </tr>
+                <tr>
+                    <td>=</td>
+                </tr>
+            </tbody>
+        </table>
+    </div> -->
+    <div class="output">
+        <table>
+            <thead>
+                <th colspan="2"><p id="output">Output:</p></th>
+                <!-- <th colspan="2"><input type="number" name="" id="output" placeholder="Output"></th> -->
+            </thead>
+            <tbody>
+                <tr>
+                    <td><button onclick="calculateAdd(input1.value, input2.value)">+</button></td>
+                    <td><button onclick="calculateSub(input1.value, input2.value)">-</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="calculateMul(input1.value, input2.value)">*</button></td>
+                    <td><button onclick="calculateDiv(input1.value, input2.value)">/</button></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button onclick="calculateMod(input1.value, input2.value)">Modulus</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

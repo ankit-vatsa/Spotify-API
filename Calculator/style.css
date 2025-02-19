@@ -1,0 +1,63 @@
+table{
+    width: 14em;
+    height: 20em;
+    border: 10px;
+    border-width: 4px;
+    border-color: green;
+    border-radius: 20px;
+    background-color: lightseagreen;
+}
+td{
+    
+}
+thead th{
+    height: 5em;
+    font-size: inherit;
+}
+thead th p {
+    background-color: rgb(41, 217, 208); 
+    border-radius: 20px; 
+    align-content: center;
+    width: 94%; 
+    height: 90%;
+    margin-left: 3%;
+}
+button{
+    width: 75%;
+    height: 75%;
+    font-size: inherit;
+    border-radius: 20px;
+}
+.calculator{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    border-radius: 40px;
+    background-color: rebeccapurple;
+    height: 40em;
+    width: 20em;
+}
+*{
+    /* padding: 0;
+    margin: 0; */
+}
+.output{
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    text-align: center;
+    
+    /* background-color: red; */
+}
+.input{
+    background-color: aqua;
+    padding: 5%;
+    border-radius: 20px;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  
+    background-color: rgb(75, 22, 125);
+}
