@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+    <style>
+        table{
+            min-width: 20vw;
+            height: auto;
+        }
+        .buttons{
+            min-width: 20vw;
+            max-width: auto;
+            margin-bottom: 1%;
+        }
+        button{
+            margin-left: 1%;
+            margin-right: 1%;
+        }
+        thead{
+            background-color: lightseagreen;
+        }
+        tbody{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <h1>Display People & Contacts</h1>
+    <div class="buttons">
+        <button onclick="loadData()">Load Data</button>
+        <button onclick="sortDataName()">Sort by Name</button>
+        <button onclick="sortDataEmail()">Sort by Email</button>
+    </div>
+    <table border="2">
+        <thead>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+        </thead>
+        <tbody id="dataDisplay"></tbody>
+    </table>
+    <!-- Add buttons to call the sorting & finding functionality in table-->
+</body>
+</html>
+ 
