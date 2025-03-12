@@ -82,3 +82,19 @@ else
 {
     Console.WriteLine("Email is not valid.");
 }
+
+/*
+                                                    TYPE CONVERSION
+
+//    IMPLICIT CONVERSION
+
+    int number = 42;
+    double convertedNumber= number;
+    
+//    EXPLICIT CONVERSION
+
+//    CONVERT METHOD
+
+    int ankit = Convert.ToInt32(variable);
+*/
+
